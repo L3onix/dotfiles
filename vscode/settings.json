@@ -1,0 +1,16 @@
+{
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Solarized Dark",
+  "keyboard.dispatch": "keyCode",
+  "window.titleBarStyle": "custom",
+  "editor.fontSize": 15,
+  "editor.fontFamily": "'SpaceMono Nerd Font Mono','Droid Sans Mono', 'monospace', monospace",
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "editor.cursorSurroundingLines": 999,
+  "editor.cursorSurroundingLinesStyle": "all",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.confirmDelete": false,
+  "extensions.ignoreRecommendations": true
+}
