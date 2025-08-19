@@ -1,17 +1,17 @@
 return {
   -- Solarized Osaka
-  -- {
-  --   "craftzdog/solarized-osaka.nvim",
-  --   lazy = true,
-  --   priority = 1000,
-  --   opts = {
-  --     transparent = true,
-  --     styles = {
-  --       sidebars = "transparent",
-  --       floats = "transparent",
-  --     },
-  --   },
-  -- },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
   -- Monokai Nightasty
   {
     "polirritmico/monokai-nightasty.nvim",
@@ -34,7 +34,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "monokai-nightasty",
+      -- colorscheme = "monokai-nightasty",
+      colorscheme = "solarized-osaka",
     },
   },
 }
