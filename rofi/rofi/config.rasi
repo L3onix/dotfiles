@@ -1,0 +1,147 @@
+*{
+  bg: #00141aee;
+  fg: #ffffff;
+
+  base0: #012b36;
+  base1: #063642;
+  base2: #586e75;
+  base3: #657b83;
+  base4: #9eacad;
+  base5: #adb8b8;
+  base6: #eee8d5;
+  base7: #fdf6e3;
+
+  yellow1: #332700;
+  yellow2: #664d00;
+  yellow3: #b58900;
+  yellow4: #ffc102;
+  yellow5: #fee999;
+
+  orange1: #5c2309;
+  orange2: #a13d11;
+  orange3: #cb4a15;
+  orange4: #f8520e;
+  orange5: #ff9468;
+
+  red1: #51700f;
+  red2: #b7221e;
+  red3: #cc2e2c;
+  red4: #e54c4a;
+  red5: #fd9c9b;
+
+  magenta1: #541132;
+  magenta2: #b02669;
+  magenta3: #d33682;
+  magenta4: #f255a1;
+  magenta5: #ff77b9;
+
+  violet1: #25285b;
+  violet2: #494fb6;
+  violet3: #6c71c4;
+  violet4: #9da0ed;
+  violet5: #cbcfff;
+
+  blue1: #113956;
+  blue2: #1a6497;
+  blue3: #278bd2;
+  blue4: #48aef5;
+  blue5: #aadcff;
+
+  cyan1: #113b3d;
+  cyan2: #196265;
+  cyan3: #2aa198;
+  cyan4: #27eee0;
+  cyan5: #b9fffa;
+
+  green1: #2a3200;
+  green2: #586501;
+  green3: #829601;
+  green4: #9ed600;
+  green5: #c5ea9e;
+
+  margin: 0px;
+  padding: 0px;
+  spacing: 0px;
+
+}
+
+window {
+  location: 0;
+  width: 600px;
+
+  border: 0px;
+  border-radius: 15px;
+
+  background-color: @bg;
+  border-color: @bg;
+  padding: 0px 5px 20px 5px;
+}
+
+inputbar {
+  padding: 8px 12px;
+  spacing: 12px;
+  children: [ prompt, entry ];
+}
+
+prompt, entry, element-text, element-icon {
+  vertical-align: 0.5;
+}
+
+entry {
+  placeholder: "...";
+  background-color: @base1;
+  placeholder-color: @fg;
+  text-color: @fg;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+prompt {
+  text-color: @yellow3;
+}
+
+configuration {
+  // modi: "window,drun,combi,calc";
+  modi: "calc,combi,drun,run,window";
+  display-drun: "Apps: ";
+  display-window: "Windows: ";
+  display-calc: "Calc: ";
+  display-run: "Exec: ";
+  display-combi: "Rofi: ";
+  drun-display-format: "{icon} {name} ";
+  font: "CaskaydiaMono Nerd Font Mono 12";
+  show-icons: true;
+  hover-select: true;
+  me-select-entry: "MousePrimary";
+  me-accept-entry: "!MousePrimary";
+}
+
+listview {
+  lines:6;
+}
+
+element {
+  border-radius: 3px;
+  padding: 10px 10px;
+}
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+}
+element.normal.normal {
+  background-color: @base1;
+  text-color: @base2;
+}
+element.alternate.normal {
+  background-color: @base1;
+  text-color: @base2;
+}
+element.selected.normal {
+  background-color: @green2;
+  text-color: @fg;
+}
+
+scrollbar {
+  width: 3px;
+}
+
