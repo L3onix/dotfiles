@@ -15,15 +15,11 @@
     "clock",
   ],
   "modules-right": [
-    "custom/notify",
-    "custom/clipboard",
-    // "idle_inhibitor",
     "tray",
-    "bluetooth",
-    "network",
-    "cpu",
-    "memory",
-    "pulseaudio",
+    // "idle_inhibitor",
+    "group/utils",
+    "group/connections",
+    "group/hardware",
     "custom/power",
   ],
   "idle_inhibitor": {
@@ -61,7 +57,7 @@
   "clock": {
     "format": "{:L%d %B %H:%M}",
     "tooltip": false,
-    "on-click": "flatpak run com.github.calo001.luna"
+    "on-click": "gnome-calendar"
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -77,13 +73,13 @@
   },
   "cpu": {
     "interval": 10,
-    "format": "CPU: {usage}%",
+    "format": "󰻠 {usage}%",
     "tooltip": false,
     "on-click": "kitty -e btop"
   },
   "memory": {
     "interval": 10,
-    "format": "RAM: {percentage}%",
+    "format": "{percentage}%",
     "tooltip": false,
     "on-click": "kitty -e btop"
   },
@@ -96,7 +92,7 @@
   },
   "pulseaudio": {
     "scroll-step": 5,
-    "format": "{icon}  {volume}%",
+    "format": "{icon} {volume}%",
     "format-muted": "",
     "format-icons": {
       "default": ["", "", ""]
@@ -112,23 +108,45 @@
     "spacing": 12
   },
   "custom/power": {
-    "format" : "󰐥 ",
+    "format" : "󱚢",
     "tooltip": false,
     "on-click": "sh /home/l3onix/.config/waybar/power-menu.sh"
   },
   "custom/clipboard": {
-    "format" : " ",
+    "format" : "",
     "tooltip": false,
     "on-click": "cliphist list | rofi -dmenu -p \"Clipboard: \" -display-columns 2 | cliphist decode | wl-copy"
   },
   "custom/notify": {
-    "format" : "  ",
+    "format" : "",
     "tooltip": false,
     "on-click": "lua /home/l3onix/.config/waybar/notification-history.lua"
   },
   "custom/menu": {
-    "format": " ",
+    "format": "󱚥",
     "tooltip": false,
     "on-click": "rofi -show combi -combi-modes \"drun,run,calc\""
+  },
+  "custom/sep": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": ["cpu", "memory"]
+  },
+  "group/connections": {
+    "orientation": "horizontal",
+    "modules": ["bluetooth", "network"]
+  },
+  "group/utils": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/notify",
+      "custom/clipboard",
+      "pulseaudio"
+    ]
   }
+
 }

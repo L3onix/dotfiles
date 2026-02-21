@@ -1,11 +1,14 @@
 
 * {
-  background-color: rgba(0, 20, 26, 0.9);
   border: none;
   border-radius: 0;
   min-height: 0;
   font-family: CaskaydiaMono Nerd Font;
   font-size: 17px;
+}
+
+window {
+  background-color: rgba(0, 20, 26, 0.9);
 }
 
 .modules-left {
@@ -65,9 +68,6 @@ tooltip {
   font-size: 10px;
 }
 
-#clock {
-  margin-left: 8.75px;
-}
 
 .hidden {
   opacity: 0;
@@ -81,4 +81,57 @@ tooltip {
 
 #custom-screenrecording-indicator.active {
   color: #a55555;
+}
+
+#custom-notify {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+#custom-clipboard {
+  padding-right: 10px;
+  padding-left: 6px;
+}
+
+#custom-menu {
+  font-size: 20px;
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+#custom-power {
+  background-color: rgba(173, 184, 184, 0.9);
+  color: #00141a;
+  font-size: 20px;
+  margin: 2px;
+  border-radius: 3px;
+  padding-right: 10px;
+  padding-left: 3px;
+}
+
+#pulseaudio {
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+
+#hardware {
+  background-color: rgba(204, 46, 44, 0.9);
+  border-radius: 3px;
+  margin: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#connections {
+  background-color: rgba(108, 113, 196, 0.9);
+  border-radius: 3px;
+  margin: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#utils {
+  background-color: rgba(42, 161, 152, 0.9);
+  border-radius: 3px;
+  margin: 2px;
+  padding-left: 4px;
 }
