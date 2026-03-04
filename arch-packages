@@ -1,6 +1,7 @@
 hyprland
 hyprshot
 hyprpaper
+hyprsunset
 hyprpolkit
 xdg-desktop-portal-hyprland
 libappindicator
@@ -8,6 +9,7 @@ rofi
 rofi-calc
 waybar
 mako
+swaync
 btop
 fastfetch
 kitty
@@ -23,6 +25,9 @@ gwenview
 dolphin
 ark
 dragon
+
+gnome-keyring
+
 
 git
 lazygit
