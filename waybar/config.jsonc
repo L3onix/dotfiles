@@ -120,7 +120,8 @@
   "custom/notify": {
     "format" : "",
     "tooltip": false,
-    "on-click": "lua /home/l3onix/.config/waybar/notification-history.lua"
+    // "on-click": "lua /home/l3onix/.config/waybar/notification-history.lua"
+    "on-click": "swaync-client -t -sw"
   },
   "custom/menu": {
     "format": "󱚥",
