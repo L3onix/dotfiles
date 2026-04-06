@@ -61,7 +61,7 @@
   "clock": {
     "format": "{:L%d %B %H:%M}",
     "tooltip": false,
-    "on-click": "flatpak run com.github.calo001.luna"
+    "on-click": "gnome-calendar"
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
