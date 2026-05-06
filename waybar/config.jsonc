@@ -83,6 +83,12 @@
     "tooltip": false,
     "on-click": "kitty -e btop"
   },
+  "disk": {
+    "interval": 10,
+    "format": "󱛟 {percentage_used}%",
+    "tooltip": false,
+    "on-click": "kitty -e btop"
+  },
   "bluetooth": {
     "format": "",
     "format-disabled": "󰂲",
@@ -126,7 +132,7 @@
   "custom/menu": {
     "format": "󱚥",
     "tooltip": false,
-    "on-click": "rofi -show combi -combi-modes \"drun,run,calc\""
+    "on-click": "rofi -show combi -combi-modes \"drun,run\""
   },
   "custom/sep": {
     "format": "|",
@@ -135,7 +141,7 @@
   },
   "group/hardware": {
     "orientation": "horizontal",
-    "modules": ["cpu", "memory"]
+    "modules": ["disk", "cpu", "memory"]
   },
   "group/connections": {
     "orientation": "horizontal",
