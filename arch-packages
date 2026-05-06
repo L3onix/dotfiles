@@ -17,6 +17,7 @@ wiremix
 blueberry
 unrar
 gparted
+yazi
 
 kwallet
 kate
@@ -26,7 +27,20 @@ dolphin
 ark
 dragon
 
+# GTK
 gnome-keyring
+showtime
+gnome-calculator
+amberol
+gnome-calendar
+nautilus
+gnome-disk-utility
+gnome-text-editor
+gvfs
+loupe
+sushi
+xdg-user-dirs-gtk
+
 
 
 git
