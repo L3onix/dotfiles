@@ -5,9 +5,16 @@
 { config, inputs, pkgs, ... }:
 
 {
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # Enable Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./hardware/intelgpu.nix
     ];
 
   # Bootloader.
@@ -88,11 +95,6 @@
     ];
   };
   	
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Enable Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Hardware
   hardware = {
@@ -101,25 +103,10 @@
       powerOnBoot = true;
       settings = {
         General = {
-	  Enable = "Source,Sink,Media,Socket";
-	};
+          Enable = "Source,Sink,Media,Socket";
+        };
       };
     };
-
-    enableAllFirmware = true;
-
-    firmware = [ pkgs.linux-firmware ];
-
-    graphics = {
-      enable = true;
-      enable32Bit = true;
-      extraPackages = with pkgs; [
-        intel-compute-runtime
-	intel-media-driver
-	vpl-gpu-rt
-      ];
-    };
-
   };
 
   # Configure keymap in X11
@@ -256,10 +243,6 @@
       xdg-user-dirs-gtk
       yazi
     ];
-    sessionVariables = {
-      MESA_SHADER_CACHE_MAX_SIZE = "12G";
-      GSK_RENDERER= "gl";
-    };
   };
 
 
