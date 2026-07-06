@@ -8,9 +8,19 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  boot.consoleLogLevel = 3;
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
+  boot.initrd.systemd.enable = true;
+  boot.initrd.verbose = false;
   boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelParams = [
+    "quiet"
+    "splash"
+    "rd.systemd.show_status=auto"
+    "rd.udev.log_level=3"
+    "video=3840x2160"
+  ];
   boot.extraModulePackages = [ ];
   boot.supportedFilesystems = [ "btrfs" ];
 
@@ -38,6 +48,13 @@
   };
 
   swapDevices = [ ];
+
+  # Plymouth
+  boot.plymouth.enable = true;
+  boot.plymouth.theme = "hexagon";
+  boot.plymouth.themePackages = with pkgs; [
+    (adi1090x-plymouth-themes.override { selected_themes = [ "hexagon" ]; })
+  ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
