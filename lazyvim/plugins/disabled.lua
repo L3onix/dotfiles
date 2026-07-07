@@ -2,7 +2,7 @@ return {
   -- flit.nvim
   { "ggandor/flit.nvim", enabled = false },
   -- leap.nvim
-  { "ggandor/leap.nvim", enabled = false },
+  { "https://codeberg.org/andyg/leap.nvim.git", enabled = false },
   -- flash.nvim
   { "folke/flash.nvim", enabled = false },
   -- themes
