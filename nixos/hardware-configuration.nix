@@ -19,7 +19,7 @@
     "splash"
     "rd.systemd.show_status=auto"
     "rd.udev.log_level=3"
-    "video=3840x2160"
+    "video=HDMI-A-3:3840x2160"
   ];
   boot.extraModulePackages = [ ];
   boot.supportedFilesystems = [ "btrfs" ];

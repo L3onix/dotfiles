@@ -87,6 +87,11 @@
     blueman = {
       enable = true;
     };
+    earlyoom = {
+      enable = true;
+      freeMemThreshold = 10;
+      freeSwapThreshold = 10;
+    };
     pipewire = {
       enable = true;
     };
