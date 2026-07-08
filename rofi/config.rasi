@@ -102,7 +102,8 @@ prompt {
 
 configuration {
   // modi: "window,drun,combi,calc";
-  modi: "calc,combi,drun,run,window";
+  // modi: "calc,combi,drun,run,window";
+  modi: "combi,drun,run,window";
   display-drun: "Apps: ";
   display-window: "Windows: ";
   display-calc: "Calc: ";
